@@ -21,3 +21,11 @@ spec:
     automated:
       prune: true
       selfHeal: true
+
+  ignoreDifferences:
+  - group: apps
+    kind: Deployment
+    name: cigna-nginx
+    namespace: dev
+    jsonPointers:
+    - /spec/replicas
