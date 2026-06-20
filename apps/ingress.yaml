@@ -19,5 +19,5 @@ spec:
               number: 80
   tls:
    - hosts:
-   - cigna.local
-    secretName: cigna-tls            
+       - cigna.local
+      secretName: cigna-tls            
