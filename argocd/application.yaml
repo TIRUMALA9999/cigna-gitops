@@ -9,7 +9,7 @@ spec:
   project: default
 
   source:
-    repoURL: https://github.com/<your-user>/cigna-gitops.git
+    repoURL: https://github.com/TIRUMALA9999/cigna-gitops.git
     targetRevision: HEAD
     path: apps/nginx
 
