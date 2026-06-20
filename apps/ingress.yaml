@@ -6,18 +6,19 @@ metadata:
 spec:
   ingressClassName: nginx
 
-  rules:  
-  - http:
-      paths:
-      - path: /
-        pathType: Prefix
+  rules:
+    - host: cigna.local
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: cigna-nginx-service
+                port:
+                  number: 80
 
-        backend:
-          service:
-            name: cigna-nginx-service
-            port:
-              number: 80
   tls:
-   - hosts:
-       - cigna.local
-      secretName: cigna-tls            
+    - hosts:
+        - cigna.local
+      secretName: cigna-tls    
