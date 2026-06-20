@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: cigna-nginx
-        image: cignadevacr001.azurecr.io/cigna-nginx:v1
+        image: cignadevacr001.azurecr.io/cigna-nginx:27251e291f71005442ebee4106fbb80decc143d7
 
         ports:
         - containerPort: 80
