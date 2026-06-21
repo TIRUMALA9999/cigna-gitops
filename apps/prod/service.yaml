@@ -3,7 +3,7 @@ kind: Service
 
 metadata:
   name: cigna-nginx-service
-  namespace: dev
+  namespace: prod
 
 spec:
   selector:

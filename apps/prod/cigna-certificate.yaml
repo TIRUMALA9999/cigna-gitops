@@ -2,7 +2,7 @@ apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
   name: cigna-local-cert
-  namespace: dev
+  namespace: prod
 spec:
   secretName: cigna-tls
   issuerRef:
