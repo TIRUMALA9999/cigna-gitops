@@ -17,7 +17,7 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: cigna-nginx-service
+                name: cigna-nginx-active
                 port:
                   number: 80
 
