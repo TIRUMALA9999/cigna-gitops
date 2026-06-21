@@ -8,23 +8,23 @@ spec:
     matchLabels:
       app: cigna-nginx
 
+  strategy:
+    blueGreen:
+      activeService: cigna-nginx-active
+      previewService: cigna-nginx-preview
+      autoPromotionEnabled: false
+
   template:
     metadata:
       labels:
         app: cigna-nginx
 
     spec:
-        strategy:
-          blueGreen:
-            activeService: cigna-nginx-active
-            previewService: cigna-nginx-preview
-            autoPromotionEnabled: false
       containers:
       - name: cigna-nginx
         image: cignadevacr001.azurecr.io/cigna-nginx:d8aa2a03ad2e03746f2f2e5160a66514fa2fd580
         ports:
         - containerPort: 80
-
         resources:
           requests:
             cpu: "50m"
@@ -32,7 +32,6 @@ spec:
           limits:
             cpu: "200m"
             memory: "128Mi"
-
         volumeMounts:
         - name: secrets-store-inline
           mountPath: "/mnt/secrets-store"
