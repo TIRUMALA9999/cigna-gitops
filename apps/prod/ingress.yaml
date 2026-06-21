@@ -10,7 +10,7 @@ spec:
   ingressClassName: nginx
 
   rules:
-    - host: cigna.local
+    - host: prod.cigna.local
       http:
         paths:
           - path: /
@@ -23,5 +23,5 @@ spec:
 
   tls:
     - hosts:
-        - cigna.local
+        - prod.cigna.local
       secretName: cigna-tls    
