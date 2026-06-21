@@ -11,7 +11,7 @@ spec:
   source:
     repoURL: https://github.com/TIRUMALA9999/cigna-gitops.git
     targetRevision: HEAD
-    path: apps
+    path: apps/dev
 
   destination:
     server: https://kubernetes.default.svc
